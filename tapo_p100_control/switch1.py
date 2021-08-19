@@ -6,8 +6,8 @@ import voluptuous as vol
 
 import homeassistant.helpers.config_validation as cv
 
-from homeassistant.components.switch import (
-    SwitchEntity,
+from homeassistant.components.switch1 import (
+    Switch1Entity,
     PLATFORM_SCHEMA,
     )
 from homeassistant.const import CONF_IP_ADDRESS, CONF_EMAIL, CONF_PASSWORD
@@ -42,7 +42,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     add_entities([P100Plug(p100)])
 
-class P100Plug(SwitchEntity):
+class P100Plug(Switch1Entity):
     """Representation of a P100 Plug"""
 
     def __init__(self, p100):
